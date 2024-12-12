@@ -164,9 +164,9 @@ class Game {
 function startGame(difficulty) {
     const game = new Game();
     const speeds = {
-        'easy': 150,
-        'normal': 100,
-        'hard': 70
+        'easy': 300,      // Plus lent (était 150)
+        'normal': 200,    // Plus lent (était 100)
+        'hard': 150       // Plus lent (était 70)
     };
     
     setInterval(() => game.update(), speeds[difficulty]);
