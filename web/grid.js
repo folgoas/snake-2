@@ -2,10 +2,11 @@ class CyberpunkGrid {
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
-        this.lineSpacing = 40;
-        this.scrollSpeed = 1;
+        this.lineSpacing = 80;  
+        this.scrollSpeed = 0.5;  
         this.offset = 0;
-        this.alpha = 0.5;
+        this.alpha = 0.3;  
+
     }
 
     update() {
