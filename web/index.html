@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Snake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="menu" id="mainMenu">
+            <h1>CYBERPUNK SNAKE</h1>
+            <div class="difficulty-buttons">
+                <button class="neon-button" onclick="startGame('easy')">EASY</button>
+                <button class="neon-button" onclick="startGame('normal')">NORMAL</button>
+                <button class="neon-button" onclick="startGame('hard')">HARD</button>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+        <div class="score">Score: <span id="scoreValue">0</span></div>
+        <div class="game-over" id="gameOver">
+            <h2 id="mockingText">LOOSER!</h2>
+            <p>Press R to Restart</p>
+        </div>
+    </div>
+    <script src="grid.js"></script>
+    <script src="particles.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

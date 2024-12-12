@@ -1,0 +1,122 @@
+:root {
+    --neon-blue: #00ffff;
+    --neon-pink: #ff1493;
+    --neon-green: #39ff14;
+    --dark-purple: #190033;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--dark-purple);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: var(--neon-pink);
+}
+
+.game-container {
+    position: relative;
+    width: 800px;
+    height: 800px;
+}
+
+canvas {
+    border: 2px solid var(--neon-blue);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(25, 0, 51, 0.9);
+    padding: 2em;
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 20px var(--neon-pink);
+    z-index: 100;
+}
+
+.menu h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    text-shadow: 0 0 10px var(--neon-pink);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.difficulty-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.neon-button {
+    background: none;
+    border: 2px solid var(--neon-blue);
+    color: var(--neon-blue);
+    padding: 0.5em 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-shadow: 0 0 5px var(--neon-blue);
+    font-family: 'Courier New', monospace;
+}
+
+.neon-button:hover {
+    background-color: var(--neon-blue);
+    color: var(--dark-purple);
+    box-shadow: 0 0 20px var(--neon-blue);
+}
+
+.score {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5em;
+    color: var(--neon-pink);
+    text-shadow: 0 0 5px var(--neon-pink);
+}
+
+.game-over {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(25, 0, 51, 0.9);
+    padding: 2em;
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 20px var(--neon-pink);
+    z-index: 100;
+}
+
+.game-over h2 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    animation: colorChange 0.5s infinite;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px var(--neon-pink),
+                     0 0 10px var(--neon-pink),
+                     0 0 15px var(--neon-pink);
+    }
+    to {
+        text-shadow: 0 0 10px var(--neon-pink),
+                     0 0 20px var(--neon-pink),
+                     0 0 30px var(--neon-pink);
+    }
+}
+
+@keyframes colorChange {
+    0% { color: var(--neon-pink); }
+    33% { color: var(--neon-blue); }
+    66% { color: var(--neon-green); }
+    100% { color: var(--neon-pink); }
+}
