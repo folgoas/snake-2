@@ -1,5 +1,5 @@
-const GRID_SIZE = 40;
-const GRID_COUNT = 20;
+const GRID_SIZE = 20;
+const GRID_COUNT = 40;
 const WINDOW_SIZE = GRID_SIZE * GRID_COUNT;
 
 const MOCKING_PHRASES = [
@@ -164,9 +164,9 @@ class Game {
 function startGame(difficulty) {
     const game = new Game();
     const speeds = {
-        'easy': 500,      // Beaucoup plus lent (était 300)
-        'normal': 400,    // Beaucoup plus lent (était 200)
-        'hard': 300       // Beaucoup plus lent (était 150)
+        'easy': 100,      // Vitesse modérée
+        'normal': 80,     // Un peu plus rapide
+        'hard': 60        // Encore plus rapide
     };
     
     setInterval(() => game.update(), speeds[difficulty]);
