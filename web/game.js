@@ -164,12 +164,12 @@ class Game {
 function startGame(difficulty) {
     const game = new Game();
     const speeds = {
-        'easy': 200,      // Plus lent
-        'normal': 160,    // Plus lent
-        'hard': 120       // Plus lent
+        'easy': 180,      // Un peu plus rapide (était 200)
+        'normal': 140,    // Un peu plus rapide (était 160)
+        'hard': 100       // Un peu plus rapide (était 120)
     };
     
-    // Mise à jour du serpent à vitesse réduite
+    // Mise à jour du serpent
     setInterval(() => game.update(), speeds[difficulty]);
     
     // Animation fluide à 60 FPS pour les effets visuels
